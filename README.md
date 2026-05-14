@@ -505,9 +505,13 @@ Shows the heater power u(t) over time. The signal starts high (large initial err
 
 Overlays the actual disturbance d(t) (red, a step of −0.25 at t = 15 s) against the observer estimate d_hat(t) (blue dashed). The observer tracks the disturbance with a delay determined by the DOB filter time constant (τ = 1 s).
 
-### Figure 6 — System Comparison
+### Figure 6 — System Compariso
 
 Three-line comparison of normal response, disturbed response, and filtered response on a single axis. This is the primary deliverable plot showing all three signal states simultaneously.
+
+### Figure 7 — Simulation Model
+
+The model of the overall system that is designed using the matlab code is modelled using MATLAB Simulink, for the visualtion of the system designed.The model results in the same set of graphs as the MATLAB file mentioned above.
 
 ---
 
