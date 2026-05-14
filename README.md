@@ -65,13 +65,14 @@ The DC gain of 2 means that a unit step of heater power produces a steady-state 
 
 ## 3. Control Objectives and Specifications
 
-| Requirement           | Target        | Notes                                             |
-| Steady-state error    | ≈ 0 (< 0.5 %) | Integral action eliminates offset                 |
-| Overshoot             | < 5 %         | Derivative + filter prevents underdamped response |
-| Settling time         | < 50 s        | Within 2 % band around setpoint                   |  
-| Stability             | Required      | Phase and gain margins must be positive           |
-| Smooth response       | Required      | No oscillation after settling                     |
-| Disturbance rejection | Active        | Heat loss at t = 15 s must be rejected            |
+| Requirement           | Target              | Notes                                             |
+|-----------------------|---------------------|---------------------------------------------------|
+| Steady-state error    | ≈ 0 (< 0.5 %)       | Integral action eliminates offset                 |
+| Overshoot             | < 5 %               | Derivative + filter prevents underdamped response |
+| Settling time         | < 50 s              | Within 2 % band around setpoint                   |
+| Stability             | Required            | Phase and gain margins must be positive           |
+| Smooth response       | Required            | No oscillation after settling                     |
+| Disturbance rejection | Active              | Heat loss at t = 15 s must be rejected            |
 
 ---
 
