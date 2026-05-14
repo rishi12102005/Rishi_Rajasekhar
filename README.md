@@ -39,7 +39,7 @@ This project implements a complete closed-loop temperature control system for an
 - A **disturbance observer (DOB)** that estimates and actively cancels heat loss
 - A **fully programmatic Simulink model** built and simulated entirely from MATLAB code — no manual canvas editing required
 
-The project is delivered in two files: a pure MATLAB script (`furnace_control_debugged.m`) and a Simulink builder script (`furnace_simulink_builder.m`) that produces identical results through a live simulation model.
+The project is delivered in two files: a pure MATLAB script (`Rishi_Rajasekhar_Industrial_Temperature_Control.m`) and a Simulink File  (`Rishi_Rajasekhar_Industrial_Temperature_Control_Simulation.m`) that produces identical results through a live simulation model.
 
 ---
 
@@ -85,8 +85,8 @@ The DC gain of 2 means that a unit step of heater power produces a steady-state 
 ```
 furnace_control/
 │
-├── Industrial_Temperature_Control.m      # Pure MATLAB simulation (no Simulink)
-├── Industrial_Temeperature Control.slx       # Auto-generated Simulink model (created on run)
+├── Rishi_Rajasekhar_Industrial_Temperature_Control.m     # Pure MATLAB simulation (no Simulink)
+├── Rishi_Rajasekhar_Industrial_Temperature_Control_Simulation.slx      # Simulink model
 └── README.md                       # This file
 ```
 
@@ -288,7 +288,7 @@ This metric quantifies how hard the heater is working. A lower energy value with
 
 ## 11. Simulink Model Architecture
 
-The Simulink model is built entirely by `furnace_simulink_builder.m` using MATLAB's `add_block` and `add_line` API. No manual Simulink canvas interaction is needed.
+The Simulink model is built entirely by `Rishi_Rajasekhar_Industrial_Temperature_Control.m` using MATLAB's `add_block` and `add_line` API. No manual Simulink canvas interaction is needed.
 
 ### Architecture diagram
 
@@ -531,7 +531,7 @@ All four specifications are met with comfortable margin. The low overshoot (1.6%
 
 ```matlab
 % In MATLAB Command Window:
-run('Industrial_Temperature_Control_RR')
+run('Rishi_Rajasekhar_Industrial_Temperature_Control.m')
 ```
 
 This runs the full simulation without Simulink, producing all six figures and printing performance metrics to the command window.
@@ -540,16 +540,14 @@ This runs the full simulation without Simulink, producing all six figures and pr
 
 ```matlab
 % In MATLAB Command Window:
-run('furnace_simulink_builder.m')
+run('Rishi_Rajasekhar_Industrial_Temperature_Control_Simulation.slx')
 ```
-
 This will:
-1. Create and open `furnace_control_model.slx` in Simulink
-2. Wire all blocks automatically
-3. Run the simulation for 50 s
-4. Extract signals from the `SimOut` object
-5. Produce all six figures
-6. Print performance metrics and spec check to the command window
+1. Create and open `Rishi_Rajasekhar_Industrial_Temperature_Control_Simulation.slx in Simulink
+2. Run the simulation for 50 s
+3. Extract signals from the `SimOut` object
+4. Produce all six figures
+5. Print performance metrics and spec check to the command window
 
 ### Required toolboxes
 
@@ -564,7 +562,7 @@ No additional toolboxes are needed. The MPC Toolbox and Fuzzy Logic Toolbox are 
 
 ## 19. MATLAB Version Compatibility
 
-The Simulink builder is tested and compatible with the following releases:
+The Simulink is tested and compatible with the following releases:
 
 | MATLAB version  | `SimOut.get()` returns      | Handled by `extract_ts()`            |
 |-----------------|-----------------------------|--------------------------------------|
