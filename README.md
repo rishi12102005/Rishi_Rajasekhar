@@ -53,11 +53,15 @@ G(s) = ─────── = ─────────────
         τs + 1    10s + 1
 ```
 
-Parameter	Symbol	Value	Unit
-Plant DC gain	K	2	—
-Time constant	τ	10	seconds
-Input	u(t)	Heater power	normalised
-Output	y(t)	Temperature	normalised
+Here is the parameter table converted to GitHub Markdown format for your `README.md`:
+
+| Parameter     | Symbol | Value         | Unit        |
+|---------------|--------|---------------|-------------|
+| Plant DC gain | K      | 2             | —           |
+| Time constant | τ      | 10            | seconds     |
+| Input         | u(t)   | Heater power  | normalised  |
+| Output        | y(t)   | Temperature   | normalised  |
+
 
 The DC gain of 2 means that a unit step of heater power produces a steady-state temperature of 2 (normalised units). The time constant of 10 s means the plant reaches 63.2% of its final value at t = 10 s — a moderately slow thermal system, typical of industrial furnaces.
 
